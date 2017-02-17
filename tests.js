@@ -38,14 +38,14 @@ function convertCaseUpper(value) {
 
 avow('convertCaseUpper returns an uppercase string', convertCaseUpper('i am shouting!') === 'I AM SHOUTING!');
 
-function repeatWord(word) {
-     var word = word.repeat(2);
+function repeatWord(word, n) {
+     var word = word.repeat(n);
     return word;
 }
 avow('repeatWord returns a repeated word', repeatWord('Knock.', 2) === 'Knock.Knock.');
 
-function sliceWord(word) {
-    var word = word.slice(7,12)
+function sliceWord(word, a, b) {
+    var word = word.slice(a,b)
     return word;
 }
 
@@ -65,8 +65,8 @@ function whereIsCarmen(value) {
 
 avow('whereIsCarmen returns Carmen\'s position', whereIsCarmen('In the rainy Panama Canal, Carmen Sandiego silently slipped aboard a rusty shipping container bound for New Zealand.', 'Carmen') === 27);
 
-function doesItContain(str) {
-    var str = str.includes('Museum');
+function doesItContain(str, word) {
+    var str = str.includes(word);
     return str;
 }
 
@@ -139,7 +139,6 @@ function myNameIs(value) {
    
 };
 avow('myNameIs returns your name from an object with a name property', myNameIs({name:'Your Name Here'}) === 'Your Name Here');
-
 
 // Arrays
 function getFirstItem(value) {
